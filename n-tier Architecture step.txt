@@ -1,0 +1,21 @@
+1 - first we have to create class library  for business layer and data ascces layer
+
+step 1 - In data acces layer 
+	1 - create entity class in data access layer 
+	2 - create context class in data  acess layer 
+	4 - Create Interfaces of entity classes and repository to implement all crud opeation of interface
+	5 - Add connection string to app.config file
+	6 - build the class
+
+step 2 - In businees logic layer
+	1- Add the refrence of data access layer
+	1- create operation class for all entity class and and the project of repository class to call the functions.
+	
+
+step 3 - creta wep api project 
+	1 - Add the refrence of business layer and data ascces layer.
+	2 - Create the model class of all the entity class which present in data access layer and to whome you want to work with.
+	3 - Create a Empty web api controller.
+	    -> create object of operation  from the refrence class of businees layer 
+	    -> create function which you want to call from sever and data model using model class 
+		the call the opertion of business class and convert object and pass the object
